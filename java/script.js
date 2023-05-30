@@ -79,4 +79,15 @@ ctx.closePath();
   ctx.beginPath();
   ctx.arc(400, 412, 25, Math.PI* 0.9, Math.PI * 0.1, true);
   ctx.stroke();
+
+ var h1 = document.getElementById("tex");
+  var colors = ["red", "pink", "#DFFF00", "blue", "#DE3163"];
+  var currentIndex = 0;
+  
+  function changeColor(){
+      h1.style.backgroundColor = colors[currentIndex];
+      currentIndex = (currentIndex + 1) % colors.length;
+  }
+  
+  setInterval(changeColor, 1000)
   
